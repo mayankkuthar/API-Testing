@@ -4,11 +4,7 @@ function onSignIn(googleUser) {
     console.log('Name: ' + profile.getName());
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    content.innerHTML = "<h2>Name: "+ googleUser.getBasicProfile().getName() +"</h2>";
+    var name=googleUser.getBasicProfile().getName();
+    console.log((name));
   }
-  function call(googleUser){
-  var name=googleUser.getBasicProfile().getName();
-  console.log((name));
-  content.innerHTML = "<h2>Name: "+ googleUser.getBasicProfile().getName() +"</h2>";
-  }
-
-  call();
